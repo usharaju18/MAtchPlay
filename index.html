@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Match Player</title>
+</head>
+
+<body>
+    <ul class="topnav">
+        <li><a  href="dashboard.html">Dashboard</a></li>
+        <li><a class="active" href="index.html">
+                Players </a>
+        </li>
+    </ul>
+
+    <div class="container mt-4" id="player-base-list">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-basketball-ball"></i><span class="text-primary"> Player</span> List
+        </h1>
+        <form id="player-form" style="border:1px solid #ccc">
+            <div class="container">
+                <label for="pid" hidden>Pid</label>
+                <input type="number" id="pid" class="form-control" placeholder="Enter Id" hidden>
+                <label for="name" class="required-label">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter name">
+                <label for="profile_photo">Profile Picture</label>
+                <input id="profile_photo" type="file" placeholder="Photo" capture
+                    accept="image/png, image/jpg, image/jpeg">
+                <label for="sport" class="required-label">Fav Sport</label>
+                <input type="text" id="sport" class="form-control"
+                    placeholder="Enter favourite sports with comma seperated">
+                <label for="location" class="required-label">Location</label>
+                <select id="location" multiple name="location">
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Shimoga">Shimoga</option>
+                    <option value="Kochi">Kochi</option>
+                    <option value="Trivandrum">Trivandrum</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bhuvaneswar">Bhuvaneswar</option>
+                </select>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Write something.."
+                    style="height:200px"></textarea>
+                <div class="clearfix">
+                    <input type="submit" value="Add Player" class="addplayerbtn">
+                </div>
+            </div>
+        </form>
+        <div style="overflow-x:auto;" class="clearfix">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Profile Pic</th>
+                        <th>Name</th>
+                        <th>Fav Sport</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="player-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container mt-4 player-detail">
+        <h1>Player Detail</h1>
+        <div class="card">
+            <img id="player-pic" src="https://i.stack.imgur.com/YQu5k.png" alt="Player Pic">
+            <h2 id="player-name"></h2>
+            <p class="title">
+            <h4>Favourite Sport: </h3><span id="player-sport"></span></p>
+                <p class="title">
+                <h4>Location: </h4><span id="player-location"></span></p>
+                <div style="margin: 24px 0;">
+                    <p id="player-description"></p>
+                </div>
+        </div>
+        <h3>
+            <i class="fas fa-user-friends"></i><span class="text-primary"> Matching</span> Players
+            <a href="#" onclick="goBack()" style="font-size: 14px;"><i class="fa fa-undo" aria-hidden="true"></i>
+                Back</a>
+        </h3>
+        <div style="overflow-x:auto;" class="clearfix match-player-detail">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Profile Pic</th>
+                        <th>Name</th>
+                        <th>Fav Sport</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody id="matching-player-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/da905fa3a2.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

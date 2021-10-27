@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+
+    <ul class="topnav">
+        <li><a class="active" href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">
+                Players </a>
+        </li>
+    </ul>
+
+    <div id="graphical-data" style="padding:0 16px;">
+        <h2>Players from each location</h2>
+        <!-- <div class="piechart"></div> -->
+        <canvas id="test_pie_canvas" width=600 height=400></canvas >
+
+        <h2>Players interested in different sports</h2>
+        <canvas id="test_bar_canvas" width="1000" height="300" style="border: 2px solid black;">
+    </div>
+    <div id="no-data">Nothing to display</div>
+    <script src="https://kit.fontawesome.com/da905fa3a2.js" crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
